@@ -1,14 +1,10 @@
 pipeline {
-    agent none
-    stages {
-
-        stage('Install alpine') {
-            agent {
-               docker {
-                    image 'alpine:3.7'
-                }
-            }
+    agent {
+        docker {
+            image 'alpine:3.7'
         }
+    }
+    stages {
 
         stage('Build') {
             steps {
