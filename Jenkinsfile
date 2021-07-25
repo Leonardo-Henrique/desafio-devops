@@ -8,13 +8,15 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'docker build -t python-web-app .'
+                echo 
+                'Running build phase. ' 
             }
         }
 
         stage('Run') {
             steps {
-                sh 'docker run -it -p 5000:5000 python-web-app'
+                echo 
+                'Running run phase. ' 
             }
         }
     }
