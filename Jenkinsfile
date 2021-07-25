@@ -4,13 +4,6 @@ pipeline {
     }
     stages {
 
-
-        stage('initial') {
-            steps {
-                sh 'docker run'
-            }
-        }
-
         stage('Build') {
             steps {
                 sh 'docker build -t python-web-app .'
